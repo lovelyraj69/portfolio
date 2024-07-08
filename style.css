@@ -15,6 +15,7 @@ header {
     height: 100vh;
     width: 100vw;
     position: fixed;
+    z-index: 1;
 }
 
 .logo-container {
@@ -25,13 +26,13 @@ header {
 }
 
 nav h1 {
-    font-size: 50px;
+    font-size: 30px;
     color: white;
 }
 
 .navigation {
     height: 50vh;
-    width: 100px;
+    width: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,20 +51,20 @@ nav h1 {
 }
 
 .page-no a {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
     color: white;
     padding-left: 20px;
 }
 
-.page-no a:hover {
+.page-no a.active {
     border-right: 5px solid white;
 }
 
 nav button {
-    padding: 20px;
-    width: 150px;
+    padding: 10px;
+    width: 100px;
     font-weight: bold;
     color: white;
     border: 3px solid white;
@@ -81,13 +82,13 @@ nav button:hover {
 
 .icons {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
 }
 
 nav i {
-    font-size: 50px;
+    font-size: 30px;
     color: white;
-    padding-left: 50px;
+    padding-left: 20px;
     cursor: pointer;
 }
 
@@ -97,7 +98,7 @@ nav i {
 
 nav #scrollBtn {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -120,11 +121,11 @@ nav #scrollBtn {
 }
 
 .content-container h1 {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .content-container p {
-    font-size: 25px;
+    font-size: 15px;
     padding-top: 30px;
     padding-bottom: 30px;
     width: 30vw;
@@ -132,22 +133,24 @@ nav #scrollBtn {
 
 .content-container a {
     color: blueviolet;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 5;
 }
 
 .pc-img {
-    height: 900px;
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
 }
 
 .purpleA-box img {
     position: absolute;
     right: 50%;
     bottom: 0;
-    width: 300px;
+    width: 200px;
     margin: auto;
     z-index: -1;
 }
@@ -175,11 +178,11 @@ nav #scrollBtn {
 }
 
 .about-container h1 {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .about-container p {
-    font-size: 25px;
+    font-size: 15px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -187,12 +190,12 @@ nav #scrollBtn {
 .para-container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
 }
 
 .para-container p {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     width: 50vw;
     padding-left: 100px;
     padding-right: 200px;
@@ -200,15 +203,16 @@ nav #scrollBtn {
 }
 
 .sideA-box img {
+    width: 500px;
     position: absolute;
-    top: 60%;
+    top: 68%;
     left: 0;
     opacity: .5;
     z-index: -1;
 }
 
 .purpleB-box img {
-    width: 300px;
+    width: 200px;
     position: absolute;
     left: 50%;
     top: 110%;
@@ -216,7 +220,7 @@ nav #scrollBtn {
 }
 
 .t-box img {
-    width: 600px;
+    width: 400px;
     position: absolute;
     left: 30%;
     top: 125%;
@@ -225,8 +229,9 @@ nav #scrollBtn {
 }
 
 .sideB-box img {
+    width: 500px;
     position: absolute;
-    top: 165%;
+    top: 167%;
     right: 0;
     opacity: .5;
     transform: rotate(180deg);
@@ -234,6 +239,7 @@ nav #scrollBtn {
 }
 
 .dark-cube1 img {
+    width: 200px;
     position: absolute;
     left: 10%;
     top: 160%;
@@ -264,15 +270,15 @@ nav #scrollBtn {
 }
 
 .skill-container h1 {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .skill-container p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .skill-container a {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
     color: red;
@@ -281,13 +287,14 @@ nav #scrollBtn {
 
 .icon-container i {
     color: white;
-    font-size: 100px;
+    font-size: 50px;
     padding: 20px;
 }
 
 .sideC-box img {
+    width: 500px;
     position: absolute;
-    top: 260%;
+    top: 268%;
     left: 0;
     opacity: .5;
     z-index: -1;
@@ -314,15 +321,15 @@ nav #scrollBtn {
 }
 
 .project-container h1 {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .project-container p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #contact {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
     color: red;
@@ -331,7 +338,7 @@ nav #scrollBtn {
 }
 
 .project-container a {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
     color: blueviolet;
@@ -339,8 +346,9 @@ nav #scrollBtn {
 }
 
 .sideD-box img {
+    width: 500px;
     position: absolute;
-    top: 360%;
+    top: 367%;
     right: 0;
     opacity: .5;
     transform: rotate(180deg);
@@ -382,25 +390,25 @@ nav #scrollBtn {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    height: 300px;
     gap: 20px;
     color: white;
 }
 
 .contact-container p {
-    font-size: 25px;
-    width: 30vw;
+    font-size: 20px;
+    width: 30vw;    
 }
 
 .contact-container a {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
     color: white;
 }
 
 #insta {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
     color: red;
@@ -414,7 +422,7 @@ nav #scrollBtn {
 }
 
 .con-icons i {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .contact-form {
@@ -461,6 +469,7 @@ nav #scrollBtn {
 }
 
 .white-cube1 img {
+    width: 200px;
     position: absolute;
     top: 470%;
     left: 5%;
@@ -468,15 +477,17 @@ nav #scrollBtn {
 }
 
 .dark-romb img {
+    width: 300px;
     position: absolute;
-    right: 5%;
+    top: 460%;
+    right: 15%;
     z-index: -1;
 }
 
 .purple-romb3 img {
     position: absolute;
     top: 410%;
-    left: 40%;
+    left: 45%;
     width: 300px;
     z-index: -1;
 }
@@ -1763,7 +1774,7 @@ nav #scrollBtn {
     }
 
     .contact-container a {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: bold;
         text-decoration: none;
         color: white;
@@ -1896,8 +1907,7 @@ nav #scrollBtn {
     }
 
     .icons {
-        left: 20px;
-        bottom: 20px;
+        display: none;
     }
 
     nav i {
@@ -2312,10 +2322,6 @@ nav #scrollBtn {
 /* Mediaquary for 375px */
 
 @media (max-width:376px) {
-
-    .icons {
-        bottom: 0;
-    }
 
     .about-container {
         justify-content: center;

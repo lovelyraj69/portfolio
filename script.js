@@ -8,45 +8,62 @@ setInterval(() => {
     index = (index + 1) % arr.length;
 }, 2000);
 
-// Scrolling the page
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
+// For navbar active 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        links.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
         });
     });
 });
 
-//Auto scrolling the page
-document.addEventListener('scroll', () => {
-    let scrollPos = window.scrollY;
-    let windowHeight = window.innerHeight;
 
-    let sections = document.querySelectorAll('');
+// Using scroll button to scroll the page
 
-    sections.forEach((section, index) => {
-        if (scrollPos >= section.offsetTop - windowHeight / 2 && scrollPos < section.offsetTop + windowHeight / 2) {
-            if (index < sections.length - 1) {
-                window.scrollTo({
-                    top: sections[index + 1].offsetTop,
-                    behavior: 'smooth'
-                });
-            }
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollButton = document.getElementById("scrollBtn");
+    let isAtTop = true;
+
+    scrollButton.addEventListener("click", function() {
+        if (isAtTop) {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+            scrollButton.textContent = "Scroll Up";
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            scrollButton.textContent = "Scroll Down";
         }
+        isAtTop = !isAtTop;
     });
 });
 
-//Using scroll button to scroll the page
-document.getElementById("scrollBtn").addEventListener('click',() => {
-    window.scrollTo(0,document.body.scrollHeight)
-})
 
 
 // For page view
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
